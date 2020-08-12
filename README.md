@@ -1,2 +1,2 @@
-# IVA-Dataset-Collection-page
+# IVA-Dataset-Collection-Page
 Arabic Visual Question Answering Dataset Collection.
