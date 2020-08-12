@@ -4,5 +4,5 @@ Arabic Captioning & Visual Question Answering Dataset Collection website that up
 Deployed Layout1 on ElasticBeanstalk: http://iva-samples.eu-central-1.elasticbeanstalk.com/
 
 Layout2 screenshot:
-![GitHub Logo](https://input-bucket-sw.s3.amazonaws.com/Capture8.PNG)
-Format: ![Alt Text](url)
+![Layout2 Screenshot](https://input-bucket-sw.s3.amazonaws.com/Capture8.PNG)
+
