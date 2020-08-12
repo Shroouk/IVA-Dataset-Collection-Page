@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Arabic Dataset Collection </title>
+  <link rel="normalized" href="static/css/normalized.css"/>
+  <link rel ="fontawesome" href ="static/css/all.min.css"/>
+  <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static/css/iva.css"/>
+</head>
+
+<body>
+
+<div class="main-body">
+    <!-- Header -->
+  <div class="header">
+    <section class="site-blocks-cover overflow-hidden">
+        <div class="container">
+          <div class="row">
+            <div class=" col-sm-12 col-lg-12 " style="margin-top: 50px;">
+                <div class="col-lg-11">
+
+                  <img src="static/img/logo.png" style="height:85px; width:90px;">
+                  <h1 data-text="Intelligent Vision Assistant">
+                    Intelligent Vision Assistant
+                  </h1>
+                  <p>Arabic Caption & Visual Question Answering Dataset Collection </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  <p class="note" id="message"> {{ message }} <p>
+
+  <!-- Inputs -->
+  <form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+
+    <div class="uploading">
+      <h5>- ساهم بصورة -</h5>
+      <label class="custom-file-upload" for="inpFile"> أرفق صورة </label>
+      <input type="file" name="inpFile" id="inpFile" accept="image/*" required="required">
+     </div>
+
+    <div class="uploaded-photo">
+      <div class=" slide-one-item home-slider owl-carousel inpimage" style="text-align: center;">
+        <img src="static/img/no-image.jpg"  alt="" class="img-fluid img " id="inpimg">
+      </div>
+
+      <div class="image-preview" id="imagePreview" style="text-align: -webkit-center;">
+      <img src="" id="file-ip-1-preview" class="image-preview--image img-fluid img " >
+    </div>
+
+  </div>
+
+  <div class="inputs">
+    <div class="note middleNote"> يمكنك إضافة عدد 4 أسئلة وأوصاف فقط كحد أدنى، ونرجو أن تكون المدخلات باللغة العربية الفصحى </div>
+    <div class="row">
+      <div class=" col-sm-12 col-md-6 input-acc">
+        <span class="btn accordion first">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption1" required="required">
+        </div>
+
+        <span class="btn accordion">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption2" required="required">
+        </div>
+
+        <span class="btn accordion">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption3" required="required">
+        </div>
+
+        <span class="btn accordion">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption4" required="required">
+        </div>
+
+        <span class="btn accordion">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption5">
+        </div>
+
+        <span class="btn accordion last">ضع وصف للصورة</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب وصفا قصيرا" name="caption6">
+        </div>
+      </div>
+
+      <div class=" col-sm-12 col-md-6 input-acc">
+        <span class="btn accordion first">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question1" required="required">
+          <input type="text" placeholder="اكتب الاجابة" name="answer1" required="required" maxlength="15">
+        </div>
+
+        <span class="btn accordion">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question2" required="required">
+          <input type="text" placeholder="اكتب الاجابة" name="answer2" required="required" maxlength="15">
+        </div>
+
+        <span class="btn accordion">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question3" required="required">
+          <input type="text" placeholder="اكتب الاجابة" name="answer3" required="required" maxlength="15">
+        </div>
+
+      <span class="btn accordion">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question4" required="required">
+          <input type="text" placeholder="اكتب الاجابة" name="answer4" required="required" maxlength="15">
+        </div>
+
+        <span class="btn accordion">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question5">
+          <input type="text" placeholder="اكتب الاجابة"  name="answer5" maxlength="15">
+        </div>
+
+        <span class="btn accordion last">اكتب سؤال</span>
+        <div class="panel">
+          <input type="text" placeholder="اكتب سؤال" name="question6">
+          <input type="text" placeholder="اكتب الاجابة"  name="answer6" maxlength="15">
+        </div>
+      </div>
+    </div>
+
+    <!-- submit -->
+    <div class="submitting">
+      <input type="submit" id="Reg" value="إرسال">
+    </div>
+</form>
+
+    <!-- Note -->
+    <div class="note endNote">
+      <h2>ملاحظة</h2>
+      <p>
+
+        .برجاء العلم أن هذه الصور لن تستخدم سوى في تحسين التطبيق فقط. و يجب عدم رفع صور تحتوى على معلومات شخصية حفاظًا على خصوصيتك
+
+      </p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+   <script src="static/js/all.min.js" ></script>
+   <script src="static/js/jquery-3.4.1.min.js"></script>
+   <script src="static/js/iva.js"></script>
+   <script src="static/js/popper.js" ></script>
+   <script src="static/js/sweetalert2@9.js"></script>
+
+ </body>

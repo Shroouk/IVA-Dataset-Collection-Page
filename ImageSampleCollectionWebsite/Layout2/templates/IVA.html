@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arabic Dataset Collection</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&display=swap" rel="stylesheet">
+
+
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/css/style.css"/>
+</head>
+<body style="background-image: url('static/images/1.jpeg');background-position: center; background-attachment: fixed;">
+	<div class="page-content" >
+		<div class="wizard-v2-content">
+			<div class="wizard-image">
+
+				<div class="row">
+            <div class=" col-sm-12 col-lg-12 " style="margin-top: 200px;margin-left: 25px;">
+
+              <div class="row">
+                <div class="col-lg-11">
+
+                  <img src="static/images/logo.png" style="height:85px; width:90px;">
+                  <h1 data-text="Intelligent Vision Assistant" style="">
+                    Intelligent Vision Assistant
+                  </h1>
+                  <p style="letter-spacing: 0.3rem;">Arabic Visual Question Answering Dataset Collection </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+			</div>
+			<div class="wizard-form">
+				<div class="wizard-header">
+					<h3>Intelligent Vision Assistant</h3>
+					<p>Arabic Captioning & Visual Question Answering Dataset Collection.</p>
+				</div>
+		        <form class="form-register" action="{{ url_for('index') }}" name="myForm" id="form"  method="POST" enctype="multipart/form-data">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>1</h2>
+			            <section>
+							<div class="note message">
+							<p> {{ message }} </p>
+							</div>
+			                <div class="inner">
+
+												<div class="uploaded-photo" style="margin-top: -20px;">
+												    <div class=" slide-one-item home-slider owl-carousel inpimage" style="text-align: center;">
+												      <img src="static/images/no-image.jpg"  alt="" class="img-fluid img " id="inpimg">
+												    </div>
+
+												    <div class="image-preview" id="imagePreview" style="text-align: -webkit-center;">
+												    <img src="" id="file-ip-1-preview" class="image-preview--image img-fluid img " >
+												  </div>
+
+												  </div>
+
+													<div class="uploading">
+														<h5>- ساهم بصورة -</h5>
+														<label class="custom-file-upload" for="takePictureField"> أرفق صورة </label>
+														<input type="file" name="inpFile"  id="takePictureField" class="takePictureField" required="required"  />
+
+													 </div>
+
+
+														
+
+											</div>
+			            </section>
+						<!-- SECTION 2 -->
+						<h2>2</h2>
+							<section>
+							<div class="note message"> 
+								<p>	يمكنك إضافة عدد 4 أسئلة وأوصاف فقط كحد أدنى، ونرجو أن تكون المدخلات باللغة العربية الفصحى </p>
+							</div>
+			                <div class="inner">
+								<div class="form-row">
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption1" id="caption1" required="required" class="form-control" >
+									</div>
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption2" id="caption2" required="required" class="form-control" >
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption3" id="caption3" required="required" class="form-control" >
+									</div>
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption4" id="caption4" required="required" class="form-control">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption5" class="form-control" >
+									</div>
+									<div class="form-holder">
+										<input type="text" placeholder="اكتب وصفا قصيرا" name="caption6"  class="form-control">
+									</div>
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            <h2>3</h2>
+			            <section>
+							<div class="note message"> 
+								<p>	يمكنك إضافة عدد 4 أسئلة وأوصاف فقط كحد أدنى، ونرجو أن تكون المدخلات باللغة العربية الفصحى </p>
+							</div>
+			                <div class="inner">
+
+												<div class="form-row">
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question1" required="required" class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer1" required="required" class="form-control" >
+													</div>
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question2" required="required" class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer2" required="required" class="form-control" >
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question3" required="required" class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer3" required="required" class="form-control" >
+													</div>
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question4" required="required" class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer4" required="required" class="form-control" >
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question5"  class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer5"  class="form-control" >
+													</div>
+													<div class="form-holder">
+														<input type="text" placeholder="اكتب سؤال"  name="question6"  class="form-control" >
+														<input type="text" placeholder="اكتب الاجابة"  name="answer6"  class="form-control" >
+													</div>
+												</div>
+
+											</div>
+			            </section>
+		        	</div>
+
+							<!-- submit -->
+        <div class="submitting" name="submitting">
+          <input type="submit" id="Reg" value="إرسال" >
+        </div>
+
+		        </form>
+
+						<div class="note">
+      <h2>ملاحظة</h2>
+      <p>
+
+        برجاء العلم أن هذه الصور لن تستخدم سوى في تحسين التطبيق فقط. و يجب عدم رفع صور تحتوى على معلومات شخصية حفاظا على خصوصيتك
+
+      </p>
+
+
+      </div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+	<script src="static/js/jquery-3.3.1.min.js"></script>
+	<script src="static/js/jquery.steps.js"></script>
+	<script src="static/js/jquery-ui.min.js"></script>
+	 <script src="static/js/sweetalert2@9.js"></script>
+	<script src="static/js/main.js"></script>
+	<script src="static/js/iva.js"></script>
+</body>
+</html>
